@@ -1,94 +1,138 @@
-# Horizon Daily - 2026-11-09
+# Horizon Daily - 2026-11-10
 
-> From 12 items, 5 important content pieces were selected
+> From 14 items, 8 important content pieces were selected
 
 ---
 
 **Technology News**
-1. [Security Analysis Reveals Global Vehicle Unlocking Vulnerability in Major Automotive Brand](#item-tech-news-1) ⭐️ 8.0/10
-2. [Frontier3DBench Evaluates Coding Agents on Interactive 3D Objects, Scenes, and Worlds](#item-tech-news-2) ⭐️ 8.0/10
-3. [Outlook.com Rejects Emails From Domains Lacking DMARC Implementation](#item-tech-news-3) ⭐️ 7.0/10
-4. [KetchUp: Open-Source SketchUp Alternative Built With Rust and WebGPU](#item-tech-news-4) ⭐️ 7.0/10
-5. [Comparing C and Rust Implementations for a Custom SQLite Parse Number Extension](#item-tech-news-5) ⭐️ 7.0/10
+1. [Google DeepMind Introduces AlphaProof Code for Formal Codebase Verification](#item-tech-news-1) ⭐️ 8.0/10
+2. [Blender 5.3 Released With Native Gaussian Splat Support](#item-tech-news-2) ⭐️ 8.0/10
+3. [Introducing Our Smallest, Most Efficient Model: Muse Ember](#item-tech-news-3) ⭐️ 8.0/10
+4. [SWE-Pair Introduces Multi-Bug Coding-Agent Benchmark Across Real Python Projects](#item-tech-news-4) ⭐️ 8.0/10
+5. [Smart Home Automation Systems Should Operate Locally Without Internet Dependency](#item-tech-news-5) ⭐️ 7.0/10
+6. [Val Town Announces Closure of Operations](#item-tech-news-6) ⭐️ 7.0/10
+7. [Prompt Engineering Technique Improves Claude Fable 5.2 Code Structuring](#item-tech-news-7) ⭐️ 7.0/10
+8. [TimesFM 3.0, Chronos-2, and Toto 2.0 Fail to Beat Simple Baselines on Stock Market Data](#item-tech-news-8) ⭐️ 7.0/10
 
 ---
 
 ## Technology News
 
 <a id="item-tech-news-1"></a>
-### [Security Analysis Reveals Global Vehicle Unlocking Vulnerability in Major Automotive Brand](https://shubs.io/unlocking-any-car-from-x-brand-in-most-of-the-world/) ⭐️ 8.0/10
+### [Google DeepMind Introduces AlphaProof Code for Formal Codebase Verification](https://deepmind.google/blog/introducing-alphaproof-code/) ⭐️ 8.0/10
 
-A security analysis published by infosecau details a widespread vulnerability affecting vehicles from a major automotive brand across most of the world, allowing them to be unlocked. The analysis highlights significant global implications for automotive cybersecurity and remote access systems. The exact technical details of the exploit and the specific affected models remain constrained by the available report.
+Google DeepMind announced AlphaProof Code, an artificial intelligence system that merges language models with formal verification tools to verify codebases. The system aims to assist with code correctness by bridging natural language models and rigorous proof machinery. Availability and specific technical performance metrics were not detailed in the initial announcement.
 
-hackernews · infosecau · Nov 9, 00:10 · [Discussion](https://news.ycombinator.com/item?id=50419215)
+hackernews · ilreb · Nov 10, 12:11 · [Discussion](https://news.ycombinator.com/item?id=50439193)
 
-**「Background」** Modern connected vehicles increasingly rely on smartphone applications and web services for remote features like locking and unlocking, introducing complex digital attack surfaces into traditional automotive hardware.
+**「Background」** AlphaProof is an AI system previously developed by Google DeepMind focused on mathematical reasoning and theorem proving, utilizing reinforcement learning and language models.
 
-**「Community Discussion」** Commenters debated the necessity of always-connected vehicle features, with some questioning the reliance on cloud infrastructure for physical security and others pointing out that older vehicle models lack these network-connected vulnerabilities. Users like intuitionist also expressed skepticism regarding the absolute scope of the claim that "any car" is affected.
+**「Community Discussion」** Hacker News commenters debated the practical realities of verifying complex human-written libraries, questioning whether such agents verify broad system safety or merely narrow properties against specifications. Participants also discussed how proof-writing agents might differ from classic coding assistants that iterate on languages like Lean or Rocq.
 
-**Tags**: `#automotive security`, `#cybersecurity`, `#vulnerability analysis`
+**Tags**: `#artificial intelligence`, `#formal verification`, `#software engineering`, `#machine learning`
 
 ---
 
 <a id="item-tech-news-2"></a>
-### [Frontier3DBench Evaluates Coding Agents on Interactive 3D Objects, Scenes, and Worlds](https://www.reddit.com/r/MachineLearning/comments/1xrhg3a/can_coding_agents_build_interactive_3d_worlds/) ⭐️ 8.0/10
+### [Blender 5.3 Released With Native Gaussian Splat Support](https://www.blender.org/download/releases/5-3/) ⭐️ 8.0/10
 
-The Einsia team released Frontier3DBench, a benchmark evaluating 11 model-harness configurations across 145 tasks spanning 9 categories to test coding agents in generating interactive 3D objects, editable Blender projects, and runnable Unreal Engine worlds. According to the evaluation, GPT-6.1-sol leads overall and on objects and scenes, while GPT-6-astra leads interactive worlds, and every configuration scores lower on reference-based reconstruction than on text-driven generation. Additionally, local mechanisms score 83.08 out of 100 compared to 30.26 for stateful workflows across 165 world submissions.
+Blender 5.3 has been released, introducing native support for Gaussian Splats alongside workflow improvements in geometry nodes and overall performance updates. The update brings significant new features for 3D graphics and computer vision workflows. The release is now available for users.
 
-reddit · r/MachineLearning · /u/OliviaYii · Nov 9, 03:41
+hackernews · amlib · Nov 10, 16:15 · [Discussion](https://news.ycombinator.com/item?id=50442426)
 
-**「Background」** Frontier3DBench was developed by Einsia to test whether coding agents can progress from building detailed 3D objects to assembling scenes and constructing interactive worlds that function properly. Evaluation methods include rendered views, scene inspection, and runtime tests covering appearance, structure, and behavior.
+**「Background」** Blender is a widely used open-source 3D creation suite supporting modeling, rigging, animation, simulation, rendering, compositing, and motion tracking.
 
-**「Impact」** Developers and researchers can use Frontier3DBench to measure how effectively coding agent strengths carry over from generating individual 3D assets to environments requiring coordinated interactions and persistent state.
+**「Impact」** Users working with 3D graphics and computer vision can now natively incorporate Gaussian Splats into their pipelines and utilize bundle support within geometry nodes.
 
-**Tags**: `#AI Agents`, `#3D Generation`, `#Benchmarking`, `#Machine Learning`
+**「Community Discussion」** Community members reported that the new bundle support in geometry nodes maps well to traditional scripting paradigms and that the Gaussian Splat implementation performs maturely and fast on Apple M4 hardware.
+
+**Tags**: `#Blender`, `#3D Graphics`, `#Gaussian Splatting`, `#Software Release`
 
 ---
 
 <a id="item-tech-news-3"></a>
-### [Outlook.com Rejects Emails From Domains Lacking DMARC Implementation](https://mailroute.net/blog/outlook-rejecting-email-without-dmarc) ⭐️ 7.0/10
+### [Introducing Our Smallest, Most Efficient Model: Muse Ember](https://simonwillison.net/2026/Nov/10/muse-ember/) ⭐️ 8.0/10
 
-Outlook.com has begun rejecting incoming emails from domains that do not implement Domain-based Message Authentication, Reporting, and Conformance \(DMARC\). The policy change affects email administrators and organizations managing independent mail servers that lack proper DMARC configuration.
+Meta AI has introduced Muse Ember, a compact and efficient AI model targeted at complex reasoning, agentic tasks, tool calls, and coding subtasks, competitively priced alongside similar small models in the industry.
 
-hackernews · xmddmx · Nov 8, 19:20 · [Discussion](https://news.ycombinator.com/item?id=50416158)
+rss · Simon Willison · Nov 10, 07:28
 
-**「Background」** DMARC is an email authentication protocol designed to protect domain owners from email spoofing, phishing, and other unauthorized use, building upon SPF \(Sender Policy Framework\) and DKIM \(DomainKeys Identified Mail\).
-
-**「Impact」** Organizations and individual administrators sending mail to Outlook.com users must implement DMARC records for their domains to prevent permanent delivery failures.
-
-**「Community Discussion」** Community members debated the policy, with some expressing support for stricter security requirements while others noted frustrations regarding opaque blacklists and delivery handling on Microsoft's servers.
-
-**Tags**: `#email security`, `#dmarc`, `#microsoft outlook`, `#dns`
+**Tags**: `#Artificial Intelligence`, `#Language Models`, `#Meta AI`, `#AI Agents`
 
 ---
 
 <a id="item-tech-news-4"></a>
-### [KetchUp: Open-Source SketchUp Alternative Built With Rust and WebGPU](https://ketchup3d.github.io/app/) ⭐️ 7.0/10
+### [SWE-Pair Introduces Multi-Bug Coding-Agent Benchmark Across Real Python Projects](https://www.reddit.com/r/MachineLearning/comments/1xsuqem/swepair_a_codingagent_benchmark_where_every_task/) ⭐️ 8.0/10
 
-KetchUp has been introduced as a new open-source 3D modeling application developed using Rust and WebGPU, positioned as an alternative to SketchUp. The project targets users seeking a desktop-class modeling tool built with modern web technologies and systems programming.
+A new benchmark called SWE-Pair has been released, featuring 161 multi-bug tasks drawn from 69 real Python projects that require coding agents to fix two bugs simultaneously. According to the benchmark results, DeepSeek V4.1 Flash at medium effort solved 90% of the tasks at a cost of approximately 6 cents per solved task, while GPT-6 Luna at max effort solved 78% at about 23 cents. The dataset is available on Hugging Face, with full agent runs published by Evaligo.
 
-hackernews · dcoulmbe · Nov 8, 22:35 · [Discussion](https://news.ycombinator.com/item?id=50418176)
+reddit · r/MachineLearning · /u/heyitsdannyle · Nov 10, 18:33
 
-**「Background」** SketchUp has historically served as a widely used 3D modeling application, but changes under Trimble—including the transition toward web-based interfaces, the discontinuation of free versions, and the removal of perpetual licenses in favor of annual subscriptions—have drawn criticism from long-term users.
+**「Background」** Existing coding-agent evaluations often focus on single-bug resolution tasks within software repositories, prompting the development of multi-bug benchmarks to test agent capabilities under more complex conditions.
 
-**「Community Discussion」** Community members expressed enthusiasm for an alternative to SketchUp, citing frustration with Trimble's subscription pricing models and the shift away from local desktop applications. Some users also noted that modern AI coding assistants make it increasingly viable to build customized software tools tailored to specific needs rather than learning complex legacy packages.
-
-**Tags**: `#3D modeling`, `#Rust`, `#WebGPU`, `#open source`, `#software development`
+**Tags**: `#AI benchmarks`, `#coding agents`, `#software engineering`, `#machine learning`
 
 ---
 
 <a id="item-tech-news-5"></a>
-### [Comparing C and Rust Implementations for a Custom SQLite Parse Number Extension](https://simonwillison.net/2026/Nov/8/sqlite-parse-number-c-vs-rust/) ⭐️ 7.0/10
+### [Smart Home Automation Systems Should Operate Locally Without Internet Dependency](https://docodethatmatters.com/home-automation-overnight-success/) ⭐️ 7.0/10
 
-Simon Willison used Claude \(Opus 5.5\) to explore the differences in building a custom SQLite parse\_number\(\) extension in C versus Rust. The initial Rust extensions measured 321 KB using Rusqlite and 298 KB using sqlite-loadable-rs, outperforming the initial 14 KB C extension due to faster number parsing. However, after prompting the model to optimize the C implementation using Clinger's fast path, the revised C extension achieved faster benchmark results than the Rust versions across mixed data, integers, and decimals.
+A recent discussion highlights the architectural necessity of local-first smart home automation systems that function independently of cloud infrastructure and internet connectivity. Community members emphasize the reliability and privacy benefits of avoiding cloud-reliant devices. Participants share strategies for prioritizing local-only hardware and software integrations.
 
-rss · Simon Willison · Nov 8, 22:26
+hackernews · skittleson · Nov 10, 15:25 · [Discussion](https://news.ycombinator.com/item?id=50441707)
 
-**「Background」** The custom parse\_number\(\) function is designed to turn formatted strings like -$1,234.56 or 12.5% into numeric values for summing and sorting in SQLite, returning NULL for unparseable input. The investigation was published as part of Simon Willison's research repository on GitHub.
+**「Background」** Smart home devices have historically relied heavily on cloud services for remote monitoring, management, and automation routines, creating vulnerabilities when internet connectivity fails or when manufacturers shut down support servers.
 
-**「Impact」** Developers evaluating languages for SQLite loadable extensions can review the benchmark comparisons and code complexity differences between C and Rust explored in the research report.
+**「Impact」** Users adopting local-first automation strategies gain continuous system reliability and enhanced privacy by ensuring home infrastructure remains functional during internet outages.
 
-**Tags**: `#SQLite`, `#Rust`, `#C`, `#Database Extensions`
+**「Community Discussion」** Community members recommend filtering integrations by connection type, such as Home Assistant's IoT classifications favoring local push and local polling, while others debate the trade-offs of using specific hubs like Hubitat or custom firmware for cheap hardware.
+
+**Tags**: `#smart home`, `#home automation`, `#local control`, `#internet of things`
+
+---
+
+<a id="item-tech-news-6"></a>
+### [Val Town Announces Closure of Operations](https://blog.val.town/winding-down) ⭐️ 7.0/10
+
+Serverless scripting and end-user programming platform Val Town is winding down operations. The closure affects users relying on the platform for their hosted scripts and applications. The announcement highlights the ongoing difficulties of commercializing developer tools in this sector.
+
+hackernews · tosh · Nov 10, 17:31 · [Discussion](https://news.ycombinator.com/item?id=50443427)
+
+**「Background」** Val Town was built as a platform for end-user programming and serverless scripting, operating within the developer tooling space.
+
+**「Community Discussion」** Community members expressed sympathy for the founders and discussed the inherent commercial challenges of building businesses around end-user programming tools, noting previous ventures with similar funding paths. Commenters also discussed the platform's reliance on the Deno runtime, with some expressing concern over the ecosystem's future following Deno's recent announcements.
+
+**Tags**: `#developer tools`, `#serverless`, `#startup closure`, `#end-user programming`
+
+---
+
+<a id="item-tech-news-7"></a>
+### [Prompt Engineering Technique Improves Claude Fable 5.2 Code Structuring](https://simonwillison.net/2026/Nov/10/prompting-claude-fable-52/) ⭐️ 7.0/10
+
+Simon Willison highlighted Anthropic documentation showing that instructing Claude Fable 5.2 that a codebase belongs to it significantly improves code structuring and deduplication during small coding tasks. According to Anthropic's testing, adding the prompt statement merged repeated code in about half of attempts, compared to under one-tenth of attempts without it. Developers utilizing Claude Fable 5.2 can apply this prompt framing to encourage better code refactoring.
+
+rss · Simon Willison · Nov 10, 05:34
+
+**「Background」** Anthropic's prompt engineering documentation for Claude Fable 5.2 reveals that the model's refactoring behavior changes depending on how code ownership is framed. Without ownership instructions or when a codebase is attributed to someone else, the model typically appends to existing structures rather than deduplicating code.
+
+**「Impact」** Developers working with Claude Fable 5.2 on small coding tasks can increase the likelihood of cleaner, more deduplicated code by explicitly framing the codebase as the model's own in the prompt.
+
+**Tags**: `#Prompt Engineering`, `#Claude`, `#Artificial Intelligence`, `#Code Refactoring`
+
+---
+
+<a id="item-tech-news-8"></a>
+### [TimesFM 3.0, Chronos-2, and Toto 2.0 Fail to Beat Simple Baselines on Stock Market Data](https://www.reddit.com/r/MachineLearning/comments/1xsqztt/i_benchmarked_timesfm_30_chronos2_and_toto_20_on/) ⭐️ 7.0/10
+
+An empirical zero-shot evaluation by Reddit user /u/AdelSexy tested Google's TimesFM 3.0, Amazon's Chronos-2, and Datadog's Toto 2.0 \(313M\) on 24 large US stocks and ETFs using Yahoo Finance data from January 2014 to November 2026. The benchmark evaluated 504 trading days starting in November 2024 across 1, 5, and 20 trading day forecast horizons, alongside hourly and 5-minute price bars. Results showed that none of the models outperformed naive forecasting strategies, random walks, or a basic buy-and-hold approach, yielding directional accuracies between 49.9% and 51.1% while failing to extract exploitable predictive signals.
+
+reddit · r/MachineLearning · /u/AdelSexy · Nov 10, 16:14
+
+**「Background」** Recent years have seen the introduction of general-purpose time-series foundation models designed to handle diverse forecasting tasks without task-specific fine-tuning. Stock market price movements are notoriously difficult to predict, making them a stringent test case for evaluating the zero-shot generalization capabilities of these models against basic statistical baselines.
+
+**「Impact」** For practitioners evaluating time-series foundation models for financial forecasting, this benchmark indicates that default, zero-shot configurations of TimesFM 3.0, Chronos-2, and Toto 2.0 do not provide a reliable predictive edge over simple baseline strategies or random walks on stock price data.
+
+**Tags**: `#Time Series`, `#Machine Learning Benchmarks`, `#Foundation Models`, `#Financial Markets`
 
 ---
 
