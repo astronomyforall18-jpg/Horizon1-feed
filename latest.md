@@ -1,60 +1,48 @@
-# Horizon Daily - 2026-11-13
+# Horizon Daily - 2026-11-14
 
-> From 7 items, 3 important content pieces were selected
+> From 9 items, 2 important content pieces were selected
 
 ---
 
 **Technology News**
-1. [Engineers Scale 1-Trillion Parameter MoE Model to 384 GH200 GPUs Using TorchTitan](#item-tech-news-1) ⭐️ 8.0/10
-2. [Four Frontier AI Models Nearly Ace 7-Part Materials Science Research Test](#item-tech-news-2) ⭐️ 8.0/10
-3. [Reverse Engineering a Coway Air Purifier to Remove Cloud Dependency](#item-tech-news-3) ⭐️ 7.0/10
+1. [Tech Companies Are Attempting to Reshape the Concept of Privacy for AI](#item-tech-news-1) ⭐️ 7.0/10
+
+**Technology Blog**
+1. [Finding Meaning and Scale in Large Technology Companies](#item-tech-blog-1) ⭐️ 6.0/10
 
 ---
 
 ## Technology News
 
 <a id="item-tech-news-1"></a>
-### [Engineers Scale 1-Trillion Parameter MoE Model to 384 GH200 GPUs Using TorchTitan](https://www.reddit.com/r/MachineLearning/comments/1xvce5h/scaling_to_1t_moe_on_torchtitan_p/) ⭐️ 8.0/10
+### [Tech Companies Are Attempting to Reshape the Concept of Privacy for AI](https://www.eff.org/deeplinks/2026/11/tech-companies-are-trying-shift-entire-concept-privacy-again) ⭐️ 7.0/10
 
-Engineers scaling a 1-trillion parameter Mixture of Experts model across 384 GH200 GPUs on the JUPITER supercomputer achieved a performance of approximately 1,300 tokens per second per GPU using TorchTitan. The training setup combined 384-way Fully Sharded Data Parallel \(FSDP\) and 4-way Expert Parallelism \(EP\), avoiding Pipeline Parallelism to reduce iteration delays. Optimizations included full activation checkpointing, Grace CPU offloading via the C2C link, custom Newton-Schulz execution on GPUs, workload bucketing, and modified gradient communication strategies.
+An analysis from the Electronic Frontier Foundation examines how major technology companies are attempting to redefine privacy norms to accommodate pervasive AI data collection and surveillance. The shift raises growing concerns among technology professionals regarding continuous monitoring and the difficulty of opting out in professional and personal environments.
 
-reddit · r/MachineLearning · /u/f14-bertolotti · Nov 13, 16:28
+hackernews · gslin · Nov 14, 12:45 · [Discussion](https://news.ycombinator.com/item?id=50496602)
 
-**「Background」** Large-scale distributed training of frontier-scale models often encounters hardware bottlenecks, particularly around inter-node network bandwidth and GPU memory management. On the JUPITER supercomputer, InfiniBand provides limited bandwidth compared to local NVLink and Grace-Hopper links, requiring careful communication reduction and memory optimization techniques to maintain training efficiency.
+**「Background」** The Electronic Frontier Foundation regularly monitors and analyzes digital civil liberties, focusing on how emerging technologies and industry practices impact user privacy rights.
 
-**「Impact」** The engineering team increased training throughput by 14 times compared to their starting baseline, demonstrating that publicly funded Hopper-generation clusters can execute frontier-scale distributed training when network bandwidth and memory allocator constraints are properly addressed.
+**「Community Discussion」** Community members expressed frustration over the ubiquity of uninvited AI meeting notetakers and recording devices, noting that opting out while remaining employed has become increasingly difficult. Commenters debated whether modern recording products face less public backlash than early controversial devices like Google Glass, while questioning how individuals can maintain privacy in an economy saturated with pervasive data collection.
 
-**Tags**: `#Machine Learning`, `#Distributed Training`, `#PyTorch`, `#Hardware Acceleration`
-
----
-
-<a id="item-tech-news-2"></a>
-### [Four Frontier AI Models Nearly Ace 7-Part Materials Science Research Test](https://www.reddit.com/r/MachineLearning/comments/1xvgf6h/four_frontier_models_scored_978100_on_a_7part/) ⭐️ 8.0/10
-
-A materials-science researcher developed a seven-part technical evaluation measuring everyday research tasks, which four frontier AI models scored between 97.8 and 100 on. Tested models included Gemini 4 Carbon, Gemini 4 Hydrogen, Claude Opus 5.5, and Claude Fable 5.2, each completing the test across three fresh runs in 7 to 24 minutes with web search and code execution enabled. The author noted that minor point losses stemmed solely from formatting trivia, while the models successfully handled messy dataset reductions, crystal structure density functions, physics calculations, manuscript critiques with planted errors, and refutations of false premises. The creator plans to develop longer-horizon, multi-hour simulated lab campaign benchmarks to better assess open-ended research workflows.
-
-reddit · r/MachineLearning · /u/v\_aravind · Nov 13, 18:58
-
-**「Background」** The author, a researcher working in graphene and 2D materials, designed the test using synthetic data and code-computed answer keys to reflect realistic tasks in a research group. The evaluation methodology aligns with existing benchmarks like FrontierScience, METR time horizons, and PaperBench, highlighting a trend where bounded tasks with known procedures become saturated by frontier models.
-
-**Tags**: `#AI Benchmarks`, `#Materials Science`, `#Large Language Models`, `#Model Evaluation`
+**Tags**: `#privacy`, `#artificial intelligence`, `#surveillance`, `#tech industry`
 
 ---
 
-<a id="item-tech-news-3"></a>
-### [Reverse Engineering a Coway Air Purifier to Remove Cloud Dependency](https://scottjg.com/posts/2026-11-11-reverse-engineering-my-coway-air-purifier-to-ditch-the-cloud/) ⭐️ 7.0/10
+## Technology Blog
 
-An engineer successfully reverse-engineered their Coway air purifier to eliminate cloud reliance and achieve local control. The project highlights a growing trend of liberating IoT devices from mandatory cloud services. Affected users are smart home enthusiasts seeking local hardware management.
+<a id="item-tech-blog-1"></a>
+### [Finding Meaning and Scale in Large Technology Companies](https://seangoedecke.com/how-to-find-meaning-in-large-tech-companies/) ⭐️ 6.0/10
 
-hackernews · scottjg · Nov 12, 22:03 · [Discussion](https://news.ycombinator.com/item?id=50474959)
+rss · Sean Goedecke · Nov 14, 00:00
 
-**「Background」** Many modern consumer IoT devices rely on external cloud infrastructure for core functionality and mobile app control, restricting users to vendor-managed ecosystems.
+**「Background」** Engineers often struggle to find satisfaction in large technology companies due to organizational dysfunction and the friction of corporate bureaucracy. While many attribute this frustration simply to a barrier against shipping code, Sean Goedecke argues it stems from a deeper psychological aversion to messiness and alienation.
 
-**「Impact」** Users can regain local control over their Coway air purifiers, bypassing cloud dependencies and maintaining functionality without external server connections.
+**「Solution」** Goedecke suggests that engineers can overcome workplace alienation by focusing on the massive scale of enterprise software, where even minor improvements benefit millions of users and save cumulative years of time. Navigating the intersection of hard software engineering and organizational complexity is difficult, often requiring workers to endure awkward hoops and political games. However, engineers who maintain a rich personal life and view corporate politics with healthy detachment can treat this high-impact environment as a profound source of meaning. When organizational cynicism threatens to convince an engineer that nothing matters, the author advises separating professional identity from work by engaging directly with the external world.
 
-**「Community Discussion」** Commenters noted that many consumer devices contain glaring security flaws, such as downloading root CA certificates over plain HTTP, making them vulnerable to man-in-the-middle attacks. Several users observed that Large Language Models are increasingly accelerating these reverse-engineering efforts by helping handle tedious tasks.
+**「Takeaway」** Despite the psychological toll of corporate dysfunction, engineers can find genuine professional purpose in large tech companies by embracing the vast scale of their impact.
 
-**Tags**: `#reverse engineering`, `#IoT`, `#smart home`, `#open source`
+**Tags**: `#software engineering`, `#organizational culture`, `#career advice`, `#enterprise software`
 
 ---
 
