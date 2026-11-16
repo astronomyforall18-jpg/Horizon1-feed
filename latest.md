@@ -1,62 +1,64 @@
-# Horizon Daily - 2026-11-15
+# Horizon Daily - 2026-11-16
 
-> From 8 items, 3 important content pieces were selected
+> From 12 items, 3 important content pieces were selected
 
 ---
 
 **Technology News**
-1. [SpaceX Successfully Catches Starship Upper Stage During Flight 15](#item-tech-news-1) ⭐️ 8.0/10
-2. [Meta FAIR and NYU Researchers Train 200+ MLLMs to Unbundle Vision Encoding](#item-tech-news-2) ⭐️ 8.0/10
-3. [Developer Creates Open-Source Tool to Accelerate cudaMemcpy Pageable Transfers 5x on B300](#item-tech-news-3) ⭐️ 8.0/10
+1. [Jiff 1.0 Released as a New Datetime Library for Rust](#item-tech-news-1) ⭐️ 8.0/10
+2. [Marimba: An Efficient System One Speech Model Using a Frozen Qwen3-ASR Encoder](#item-tech-news-2) ⭐️ 8.0/10
+3. [Carnegie Mellon University Launches CS Learn to Release Free Computer Science Lectures on YouTube](#item-tech-news-3) ⭐️ 7.0/10
 
 ---
 
 ## Technology News
 
 <a id="item-tech-news-1"></a>
-### [SpaceX Successfully Catches Starship Upper Stage During Flight 15](https://www.spacex.com/launches/starship-flight-15) ⭐️ 8.0/10
+### [Jiff 1.0 Released as a New Datetime Library for Rust](https://burntsushi.net/jiff/) ⭐️ 8.0/10
 
-SpaceX successfully caught the Starship upper stage during Flight 15, marking a major milestone for fully reusable rocket systems. The test flight demonstrated the first catch of a reusable upper stage since the space shuttle era. The event was documented via official company video and launch communications.
+Developer burntsushi has released Jiff 1.0, a new datetime library for Rust designed as a robust and ergonomic alternative to existing ecosystem options like Chrono. The release addresses the notoriously difficult problem domain of date and time handling with high technical depth. The author notes that Jiff is not intended to be the right tool for every use case.
 
-hackernews · ls612 · Nov 14, 21:22 · [Discussion](https://news.ycombinator.com/item?id=50500963)
+hackernews · burntsushi · Nov 16, 16:53 · [Discussion](https://news.ycombinator.com/item?id=50519744)
 
-**「Background」** Starship is SpaceX's next-generation heavy-lift launch system designed for full reusability of both booster and upper stage components. Previous development flights focused on iterative testing of launch, controlled descent, and landing maneuvers.
+**「Background」** Rust developers previously relied heavily on established libraries such as Chrono for date and time handling. Chrono faced historical maintenance challenges and API constraints due to the difficulty of making changes to a heavily used, stable API.
 
-**「Impact」** Demonstrating a reusable upper stage paves the way for reduced payload delivery costs and increased launch cadences once operational reflight procedures are established.
+**「Impact」** Rust developers gain an alternative datetime library with a focus on ergonomics and robust API design, providing a modern option outside of existing ecosystem solutions.
 
-**「Community Discussion」** Community members praised the engineering achievement as a historic milestone, noting it is the first reusable upper stage demonstration since the Space Shuttle. Commenters highlighted that success depends on heat shield durability and future capabilities like catching boosters and reflying hardware.
+**「Community Discussion」** Community members discussed the historical maintenance difficulties and API friction of the Chrono library, while expressing appreciation for Jiff's explicit guidance on when it is not the right tool to use.
 
-**Tags**: `#SpaceX`, `#Starship`, `#Aerospace Engineering`, `#Reusable Rockets`
+**Tags**: `#Rust`, `#Datetime Library`, `#Software Development`, `#Open Source`
 
 ---
 
 <a id="item-tech-news-2"></a>
-### [Meta FAIR and NYU Researchers Train 200+ MLLMs to Unbundle Vision Encoding](https://www.reddit.com/r/MachineLearning/comments/1xx1k2o/meta_fair_nyu_unbundling_multimodal_vision/) ⭐️ 8.0/10
+### [Marimba: An Efficient System One Speech Model Using a Frozen Qwen3-ASR Encoder](https://www.reddit.com/r/MachineLearning/comments/1xxsqro/marimba_a_system_one_model_for_speech_r/) ⭐️ 8.0/10
 
-A joint research effort by Meta FAIR and NYU trained over 200 multimodal large language models from scratch to evaluate different vision encoding strategies. The study found that separate encoder pretraining is optional, whereas vision-only parameters are essential for multimodal performance. Additionally, placing vision processing before the LLM is optional, as an "in-fusion" approach that adds zero-initialized vision-only weights to the LLM's first 8 layers performs on par with separate encoders. The experiments utilized Qwen3-1.7B and 4B configurations tested across 16 VQA benchmarks and 12 language benchmarks.
+Charcot-AI has released Marimba, a speech model that uses a frozen Qwen3-ASR-0.6B encoder and lightweight readouts to process 8-second audio windows for tasks such as term detection, language identification, and turn-end prediction. The system matches or outperforms the much larger Qwen3-Omni \(30B-A3B\) model on 6 of 9 benchmark tests while underperforming on specific datasets like Speech Commands and failing to generalize to unseen tasks such as scene classification. The project is available under the Apache-2.0 license with code, weights, and a web demo accessible publicly.
 
-reddit · r/MachineLearning · /u/trungh98 · Nov 15, 17:38
+reddit · r/MachineLearning · /u/solanotodesch · Nov 16, 15:47
 
-**「Background」** Published multimodal models have diverged on vision encoder strategies, with models like Gemma 4 12B dropping the encoder, Kimi K3 training encoders from scratch, and Inkling 2 Small reintroducing an encoder. Existing models have varied in data, compute, and pretraining choices, preventing a clear consensus.
+**「Background」** Speech processing systems often rely on large models or specialized pipelines for individual tasks such as keyword spotting, language identification, and speaker diarization. Marimba addresses this by using a single frozen automatic speech recognition encoder pass combined with task-specific readouts and calibration methods.
 
-**「Impact」** Encoder-free models trailed across backbone sizes from 0.6B to 6.4B and required approximately 3x the compute to match performance, demonstrating that vision-only parameters are required. The evaluated "in-fusion" placement achieved about 13% lower time to first token compared to standard separate encoders while maintaining comparable VQA performance.
+**「Impact」** Researchers and developers can use the open-source Marimba package, weights, and API to perform multi-task speech analysis with lower computational overhead compared to larger monolithic audio models.
 
-**Tags**: `#multimodal models`, `#vision encoder`, `#artificial intelligence`, `#machine learning research`
+**Tags**: `#artificial intelligence`, `#speech recognition`, `#machine learning`, `#audio models`
 
 ---
 
 <a id="item-tech-news-3"></a>
-### [Developer Creates Open-Source Tool to Accelerate cudaMemcpy Pageable Transfers 5x on B300](https://www.reddit.com/r/MachineLearning/comments/1xx2n25/making_cudamemcpy_5x_faster_on_a_b300_p/) ⭐️ 8.0/10
+### [Carnegie Mellon University Launches CS Learn to Release Free Computer Science Lectures on YouTube](https://www.cs.cmu.edu/learn/) ⭐️ 7.0/10
 
-A developer has released an open-source tool designed to accelerate pageable CPU-to-GPU cudaMemcpy memory transfers. Benchmarks shared by the author show that copying a 1 GB tensor on a B300 system improved from 10.2 GB/s to 51.5 GB/s using the tool. The implementation and tuning utility are available via GitHub and an accompanying blog post.
+Carnegie Mellon University launched CS Learn, a new initiative releasing full semesters of lectures from active computer science courses on YouTube for free. According to instructor and CS Learn lead Phillip Compeau, the initiative premiered its first courses during the launch week, with additional courses scheduled to release in January 2026. The production relies on automation tools built by CMU students, allowing a small team to manage the workflow.
 
-reddit · r/MachineLearning · /u/makneeee · Nov 15, 18:20
+hackernews · pcompeau · Nov 16, 20:43 · [Discussion](https://news.ycombinator.com/item?id=50522980)
 
-**「Background」** Standard pageable host memory transfers in CUDA can often be a performance bottleneck compared to pinned \(page-locked\) memory operations. The newly released tool aims to optimize these host-to-device and device-to-host pathways without requiring manual code rewrites.
+**「Background」** Open courseware initiatives from major universities have historically provided public access to higher education materials, though CMU's current release differentiates itself through student-built automation tools designed to scale production with a small team.
 
-**「Impact」** Machine learning engineers and systems developers working with unpinned host tensors can achieve significantly faster data transfer speeds between the CPU and GPU by integrating the tuning utility into their workflows.
+**「Impact」** Students and self-taught developers worldwide gain free access to full-semester upper-division and introductory computer science lectures directly from Carnegie Mellon University's curriculum.
 
-**Tags**: `#CUDA`, `#GPU memory`, `#Performance Optimization`, `#Machine Learning Hardware`
+**「Community Discussion」** Community members praised the release of upper-division computer science lectures, noting the historical value of open courseware. Commenters also inquired about the potential inclusion of computer engineering courses and recommended existing CMU database resources on YouTube.
+
+**Tags**: `#computer science education`, `#open courseware`, `#online learning`, `#Carnegie Mellon University`
 
 ---
 
