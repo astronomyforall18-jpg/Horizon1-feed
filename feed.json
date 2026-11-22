@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-21T20:21:35.080522+00:00",
+  "generated_at": "2026-11-22T20:34:40.506589+00:00",
   "language": "en",
   "scope": [
     "technology",
@@ -13,31 +13,24 @@
   "articles": [
     {
       "id": "1",
-      "title": "Critical Double-Free Vulnerability Disclosed in GnuPG GPGME Library",
-      "url": "https://lists.gnupg.org/pipermail/gnupg-announce/2026q4/000517.html",
+      "title": "OpenAI Publishes Analysis on Model Perplexity and Intelligence Relationships",
+      "url": "https://openai.com/index/perplexity-and-intelligence/",
       "score": 8.0,
-      "description": "A critical double-free vulnerability affecting the GnuPG GPGME library was disclosed on November 20, 2026. The flaw impacts all software utilizing GPGME versions prior to 2.3.0, including mail clients, XMPP clients, Samba, Flatpak, Gpg4win, and code hosting platforms such as GitLab that handle signed commits. According to community comments, the vulnerability was discovered by Johan Carlsson, reported to GnuPG by GitLab on November 12, 2026, and disclosed early due to a related bug.\n\nhackernews · gdgghhhhh · Nov 21, 08:32 · Discussion\n\n「Background」 GPGME \\(GnuPG Made Easy\\) is a C library designed to make access to GnuPG cryptographic features easier for other applications, serving as a dependency for numerous mail clients and secure communication tools.\n\n「Impact」 Systems administrators and developers maintaining software that embeds or links against GnuPG GPGME versions prior to 2.3.0 must update their dependencies to mitigate the vulnerability.\n\n「Community Discussion」 Community members discussed whether the issue constitutes direct remote code execution or a double-free bug, while noting that GitLab and other downstream packages have expedited patches following coordinated disclo"
+      "description": "OpenAI published an official analysis examining the relationship between language model perplexity and intelligence, exploring how pre-training metrics correlate with modern model capabilities. The publication addresses foundational training metrics amidst ongoing industry discussions regarding scaling laws and reasoning-focused architectures.\n\nhackernews · acossta · Nov 22, 17:06 · Discussion\n\n「Background」 Perplexity is a standard metric used to measure how well a probability model predicts a sample, serving as a traditional evaluation of language model pre-training quality.\n\n「Impact」 Engineers and researchers gain additional perspective on evaluating base model potential versus reinforcement learning and chain-of-thought improvements.\n\n「Community Discussion」 Community members debated whether pre-training perplexity remains a reliable indicator of real-world capability given the performance of reasoning models like o1 and o3, with several commenters noting GPT-4.5 as a notable discontinuity on performance graphs.\n\nTags: `artificial intelligence`, `language models`, `machine learning research`, `scaling laws`"
     },
     {
       "id": "2",
-      "title": "Lean Prover Community Discusses Formal Verification of the Riemann Hypothesis",
-      "url": "https://leanprover-community.github.io/blog/posts/riemann-hypothesis/",
-      "score": 8.0,
-      "description": "The Lean Prover community blog published a post discussing the formal verification of the Riemann Hypothesis using the Lean theorem prover. The development highlights ongoing progress in formal mathematics and automated reasoning.\n\nhackernews · g-b-r · Nov 21, 14:36 · Discussion\n\n「Background」 The announcement centers on the application of the Lean proof assistant and its mathematical library, Mathlib, to formalize advanced mathematical concepts.\n\n「Community Discussion」 Commenters discussed the role of AI tools like Claude in formalizing modern mathematics alongside human experts, while noting the safeguards provided by multiple independent consistency checks across different kernels.\n\nTags: `Lean`, `Formal Verification`, `Riemann Hypothesis`, `Mathematics`, `Automated Reasoning`"
+      "title": "Graham Dumpleton Introduces Muru, an AI-Assisted Rust Server for Python Apps",
+      "url": "https://simonwillison.net/2026/Nov/21/muru/",
+      "score": 7.0,
+      "description": "Mod\\wsgi creator Graham Dumpleton has introduced Muru, a new AI-assisted Rust server designed for running ASGI and WSGI Python applications in both development and production environments. Between November 4 and November 22, 2026, Dumpleton published a detailed series of posts documenting the design, architecture, and implementation process of the project. Dumpleton states that while AI assists with the workload, his twenty years of experience with mod\\wsgi guide the project's standards and quality control.\n\nrss · Simon Willison · Nov 21, 23:56\n\n「Background」 Graham Dumpleton created mod\\wsgi 20 years ago, establishing a long-standing tool for serving Python web applications in production. Muru represents his subsequent effort to build an updated server utilizing Rust and AI assistance.\n\nTags: `Python web applications`, `Rust server`, `ASGI WSGI`, `Software development`\n\n Technology Blog"
     },
     {
       "id": "3",
-      "title": "Technical and Safety Implications of Detonating a Large Lead Azide Accumulation",
-      "url": "https://www.science.org/content/blog-post/detonating-huge-pile-lead-azide-really",
+      "title": "To Code Well, Avoid Blunders",
+      "url": "https://seangoedecke.com/to-code-well-avoid-blunders/",
       "score": 7.0,
-      "description": "An analysis explores the technical and safety implications surrounding the discovery and potential detonation of a large, unstable accumulation of lead azide. The situation highlights severe industrial safety and chemical handling concerns at a military-linked facility.\n\nhackernews · beginning\\end · Nov 21, 13:23 · Discussion\n\n「Background」 Lead azide is an extremely sensitive and unstable primary explosive used in detonators and initiators. Improper storage or prolonged accumulation of such compounds creates extreme hazard risks that complicate safe disposal.\n\n「Community Discussion」 Community members debated the structural and operational failures leading to the accumulation, with commenters noting that unstable materials of this nature often cannot be physically moved and require in-place destruction by bomb squads. Participants also pointed out historical oversight issues regarding contractor-operated military facilities and past neutralization contracts.\n\nTags: `chemical safety`, `explosives`, `industrial accident`, `infrastructure`\n\n Technology Blog"
-    },
-    {
-      "id": "4",
-      "title": "Why Output Caching Fails to Reduce LLM Inference Costs",
-      "url": "https://seangoedecke.com/why-output-caching-doesnt-work/",
-      "score": 7.0,
-      "description": "rss · Sean Goedecke · Nov 21, 00:00\n\n「Background」 While input caching effectively prevents recomputing conversation histories, output caching is often proposed to eliminate the redundant generation of repeated code snippets, evidence documents, and sample outputs. Sean Goedecke examines whether caching or optimizing LLM outputs can yield meaningful cost savings.\n\n「Solution」 Goedecke argues that output caching fails due to Amdahl's Law, as visible outputs account for only a tiny fraction of total generated tokens. Based on the author's agent histories, visible output makes up roughly 6% of total tokens, while reasoning tokens comprise 50% and tool calls account for the remaining 44%. Even an exceptionally optimistic optimization that eliminates two-thirds of visible output tokens would save only about 4% of total output tokens. Consequently, significant cost reductions cannot be achieved by targeting visible text repetition. Instead, reducing overall output token consumption requires targeting the 94% of invisible tokens through improved model intelligence. Smarter models achieve greater efficiency by reaching the correct answer with significantly fewer reasoning tokens and tool cal"
+      "description": "rss · Sean Goedecke · Nov 22, 00:00\n\n「Background」 Engineers often mistakenly view programming as a pursuit of brilliant insights and clever abstractions, whereas software engineering success in large commercial codebases actually depends on preventing catastrophic mistakes.\n\n「Solution」 Sean Goedecke argues that programming resembles chess or tennis, where avoiding major blunders—such as hanging pieces or failing to return balls—secures victory against most opponents without needing brilliant tactical moves. Because a single blunder can ruin an elegant codebase, unlike sports where a massive lead absorbs mistakes, developers must avoid cardinal sins like inconsistency and unnecessary requirements. Inconsistency breaks engineering trust by forcing developers to hunt for surprises, while unnecessary requirements are sticky, resist removal, and trigger combinatorial explosion when interacting with new features. To mitigate these risks, developers should identify how tasks fit normally into existing systems and trim requirements to the absolute minimum. This relentless focus on avoiding blunders leaves little mental energy for clever patterns or extra-credit features, which often serve "
     }
   ]
 }
