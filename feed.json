@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-22T20:34:40.506589+00:00",
+  "generated_at": "2026-11-24T01:28:18.901862+00:00",
   "language": "en",
   "scope": [
     "technology",
@@ -13,24 +13,52 @@
   "articles": [
     {
       "id": "1",
-      "title": "OpenAI Publishes Analysis on Model Perplexity and Intelligence Relationships",
-      "url": "https://openai.com/index/perplexity-and-intelligence/",
+      "title": "Nvidia Reinstates Jensen Huang as CEO Following Government Discussions",
+      "url": "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo.html",
       "score": 8.0,
-      "description": "OpenAI published an official analysis examining the relationship between language model perplexity and intelligence, exploring how pre-training metrics correlate with modern model capabilities. The publication addresses foundational training metrics amidst ongoing industry discussions regarding scaling laws and reasoning-focused architectures.\n\nhackernews · acossta · Nov 22, 17:06 · Discussion\n\n「Background」 Perplexity is a standard metric used to measure how well a probability model predicts a sample, serving as a traditional evaluation of language model pre-training quality.\n\n「Impact」 Engineers and researchers gain additional perspective on evaluating base model potential versus reinforcement learning and chain-of-thought improvements.\n\n「Community Discussion」 Community members debated whether pre-training perplexity remains a reliable indicator of real-world capability given the performance of reasoning models like o1 and o3, with several commenters noting GPT-4.5 as a notable discontinuity on performance graphs.\n\nTags: `artificial intelligence`, `language models`, `machine learning research`, `scaling laws`"
+      "description": "Nvidia has reinstated Jensen Huang as CEO following board decisions and discussions involving senior levels of the United States government. The board stated that based on government input, it is confident that Huang's reinstatement poses no national security risk.\n\nhackernews · jaz · Nov 23, 14:00 · Discussion\n\n「Background」 The reinstatement follows a prior board decision that had temporarily forced Huang out of the chief executive role, though specific details of the initial departure and subsequent discussions were not fully detailed in the source announcements.\n\n「Community Discussion」 Community members debated the significance of the board's note regarding U.S. government input, with some expressing surprise at the rapid turnaround by the board and questioning the policy implications relative to international chip sanctions.\n\nTags: `Artificial Intelligence`, `Semiconductors`, `Executive Leadership`, `Industry News`"
     },
     {
       "id": "2",
-      "title": "Graham Dumpleton Introduces Muru, an AI-Assisted Rust Server for Python Apps",
-      "url": "https://simonwillison.net/2026/Nov/21/muru/",
-      "score": 7.0,
-      "description": "Mod\\wsgi creator Graham Dumpleton has introduced Muru, a new AI-assisted Rust server designed for running ASGI and WSGI Python applications in both development and production environments. Between November 4 and November 22, 2026, Dumpleton published a detailed series of posts documenting the design, architecture, and implementation process of the project. Dumpleton states that while AI assists with the workload, his twenty years of experience with mod\\wsgi guide the project's standards and quality control.\n\nrss · Simon Willison · Nov 21, 23:56\n\n「Background」 Graham Dumpleton created mod\\wsgi 20 years ago, establishing a long-standing tool for serving Python web applications in production. Muru represents his subsequent effort to build an updated server utilizing Rust and AI assistance.\n\nTags: `Python web applications`, `Rust server`, `ASGI WSGI`, `Software development`\n\n Technology Blog"
+      "title": "Zhipu AI Releases GLM-5.4 Using Loop Transformer Architecture",
+      "url": "https://z.ai/blog/glm-5.4",
+      "score": 8.0,
+      "description": "Chinese AI lab Z.ai has released GLM-5.4, its first model utilizing a looped transformer architecture designed to improve generalized coding capabilities and increase network depth without increasing the parameter count. The model is currently unavailable as open weights and requires a Z.ai Coding Plan subscription for API access, utilizing an OpenAI-compatible Responses API at \\`https://api.z.ai/api/v1\\`.\n\nhackernews · foohis · Nov 23, 10:06 · Discussion\n\n「Background」 In standard transformer models, each layer runs once per forward pass. A loop transformer runs a group of weight-shared layers for multiple iterations to refine hidden states from previous passes.\n\n「Impact」 Developers wishing to test GLM-5.4 via API must sign up for a specialized Coding Plan subscription, as the model cannot be accessed through the regular Z.ai API tiers.\n\n「Community Discussion」 Community members noted that looped transformers help mitigate memory bandwidth bottlenecks during inference by running middle layers multiple times. However, users also observed that Chinese models engaging in extensive reasoning or \"marathon thinking\" sessions can significantly increase time-to-completion on simpler tasks c"
     },
     {
       "id": "3",
-      "title": "To Code Well, Avoid Blunders",
-      "url": "https://seangoedecke.com/to-code-well-avoid-blunders/",
+      "title": "Anthropic Releases Formal Mathematics Research on Separating VP and VNP Over Every Field",
+      "url": "https://github.com/anthropics/formal-math/tree/main/vp-vnp",
+      "score": 8.0,
+      "description": "Anthropic published formal mathematics research exploring the separation of VP and VNP over every field. The repository and associated paper present formal work addressing this theoretical computer science problem. The authors note in the paper that they have not analyzed how the work relates to relativization and algebrization.\n\nhackernews · mikeryan52 · Nov 23, 22:09 · Discussion\n\n「Background」 The VP versus VNP problem is a central question in algebraic complexity theory, analogous to the classical P versus NP problem. Anthropic released the research materials through their formal-math repository on GitHub.\n\n「Community Discussion」 Community members debated whether this research represents an incremental step toward broader complexity problems like P versus NP and discussed the implications of automated tools on mathematics graduate studies. Commenters also noted that proving such complexity separations might introduce unique mathematics even if existing algorithmic optimization strategies rely on standard assumptions like P \\!= NP.\n\nTags: `complexity theory`, `formal mathematics`, `theoretical computer science`, `automated reasoning`"
+    },
+    {
+      "id": "4",
+      "title": "Ladybird Independent Web Browser Project Reaches Alpha Release",
+      "url": "https://ladybird.org/posts/alpha/",
+      "score": 8.0,
+      "description": "The independent Ladybird web browser project has released its first alpha version, allowing users on macOS and Linux to install the software without compiling it manually. The release follows substantial architectural updates in October 2026, including a multi-threaded style and layout implementation, a new JavaScript JIT, and a Cranelift WebAssembly engine. The project notes that as an alpha release, users can expect occasional crashes and rendering issues.\n\nhackernews · janvdberg · Nov 23, 16:13 · Discussion\n\n「Background」 Ladybird is built from scratch with its own implementations for key web components such as HTML parsing, the CSS engine, layout, and JavaScript, while relying on external libraries like HarfBuzz for text shaping, Skia for 2D graphics, ffmpeg for video, and SQLite. The project has increasingly utilized AI coding agents during 2026 to accelerate development and port components.\n\n「Community Discussion」 Community members reported positive initial experiences testing various complex websites and applications, though some noted minor issues such as jerky page scrolling and missing features like service worker support.\n\nTags: `web browser`, `open source`, `software dev"
+    },
+    {
+      "id": "5",
+      "title": "Arm Documentation Mirror Site Scheduled for Discontinuation Following Trademark Request",
+      "url": "https://arm.jonpalmisc.com/",
       "score": 7.0,
-      "description": "rss · Sean Goedecke · Nov 22, 00:00\n\n「Background」 Engineers often mistakenly view programming as a pursuit of brilliant insights and clever abstractions, whereas software engineering success in large commercial codebases actually depends on preventing catastrophic mistakes.\n\n「Solution」 Sean Goedecke argues that programming resembles chess or tennis, where avoiding major blunders—such as hanging pieces or failing to return balls—secures victory against most opponents without needing brilliant tactical moves. Because a single blunder can ruin an elegant codebase, unlike sports where a massive lead absorbs mistakes, developers must avoid cardinal sins like inconsistency and unnecessary requirements. Inconsistency breaks engineering trust by forcing developers to hunt for surprises, while unnecessary requirements are sticky, resist removal, and trigger combinatorial explosion when interacting with new features. To mitigate these risks, developers should identify how tasks fit normally into existing systems and trim requirements to the absolute minimum. This relentless focus on avoiding blunders leaves little mental energy for clever patterns or extra-credit features, which often serve "
+      "description": "The independent Arm documentation mirror site arm.jonpalmisc.com announced it will be discontinued on 4 December 2026. According to the site operator, Arm requested the removal citing the usage of Arm trademarks and intellectual property in hosting the documentation. The operator stated they are evaluating options such as alternative hosting, releasing source code without Arm intellectual property, or legal avenues.\n\nhackernews · tech234a · Nov 23, 19:17 · Discussion\n\n「Background」 The site functioned as an independent mirror and reference for Arm architecture documentation. The operator noted that compliance with Arm's trademark and intellectual property concerns makes maintaining the site's utility difficult in its current form.\n\n「Impact」 Developers and engineers who rely on the independent mirror for accessing Arm documentation will lose access to this resource when the site shuts down in December 2026.\n\n「Community Discussion」 Hacker News commenters questioned the rationale behind targeting a site that aids developers using Arm technology, debating whether documentation hosting constitutes fair use or trademark infringement. Some users offered to host alternative mirrors or sugge"
+    },
+    {
+      "id": "6",
+      "title": "Stalwart Positions Itself as a Drop-In Replacement for Microsoft Exchange",
+      "url": "https://stalw.art/blog/microsoft-exchange-replacement/",
+      "score": 7.0,
+      "description": "Stalwart has introduced features to function as a technical drop-in replacement for Microsoft Exchange. The announcement has drawn attention from enterprise administrators and open-source users evaluating mail server alternatives and protocol compatibility.\n\nhackernews · shaunpud · Nov 23, 22:32 · Discussion\n\n「Background」 Microsoft Exchange is a widely used enterprise email and calendaring server known for deep protocol integration and proprietary standards such as MAPI. Stalwart is an alternative mail server project.\n\n「Community Discussion」 Community members debated the feasibility of enterprise migration, noting that protocol lock-in and existing infrastructure choices present significant barriers to adoption. Other participants discussed practical challenges such as IP deliverability issues with Outlook and the long-term licensing structure of open-source alternatives.\n\nTags: `email server`, `open source`, `microsoft exchange`, `enterprise software`"
+    },
+    {
+      "id": "7",
+      "title": "Community Debate Surrounds AI Lab Lobbying and Open-Source Regulations",
+      "url": "https://twitter.com/ylecun/status/2124550037912920090",
+      "score": 7.0,
+      "description": "Recent industry and community discussions focus on allegations that AI lab leadership hypes existential risks to lobby for regulations restricting open-source and open-weight models. Commenters argue that such regulatory pushes aim to protect proprietary business models by making consumer-accessible alternatives illegal or technically restricted.\n\nhackernews · MrBuddyCasino · Nov 23, 17:07 · Discussion\n\n「Background」 The debate centers on ongoing tensions between closed-source artificial intelligence developers and the open-source community regarding regulatory policy and the future availability of open-weight models.\n\n「Community Discussion」 Community members argue that restrictions on open models could range from hardware-level limitations on consumer GPUs to compute registration requirements. Commenters suggest these regulatory efforts serve to eliminate open-source alternatives and secure commercial control over AI deployment.\n\nTags: `artificial intelligence`, `open source`, `ai regulation`, `industry policy`"
     }
   ]
 }
