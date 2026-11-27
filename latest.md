@@ -1,76 +1,78 @@
-# Horizon Daily - 2026-11-26
+# Horizon Daily - 2026-11-27
 
-> From 11 items, 4 important content pieces were selected
+> From 7 items, 4 important content pieces were selected
 
 ---
 
 **Technology News**
-1. [AMD-Specific Fork of llama.cpp Optimizes Local LLM Performance on Older Datacenter GPUs](#item-tech-news-1) ⭐️ 7.0/10
-2. [Google Restricts Third-Party AI Agents on Workspace MCP Servers](#item-tech-news-2) ⭐️ 7.0/10
-3. [sqlite3\_rsync: Database Remote-Copy Tool For SQLite](#item-tech-news-3) ⭐️ 7.0/10
-4. [SemiAnalysis Evaluates Recent Frontier AI Models Using GDPx Benchmark](#item-tech-news-4) ⭐️ 7.0/10
+1. [SemiAnalysis Details AWS Trainium3 Microarchitecture and Inference Performance](#item-tech-news-1) ⭐️ 8.0/10
+2. [Convex Skill Transmits App Ideas to Remote Server Without Explicit Notice](#item-tech-news-2) ⭐️ 7.0/10
+3. [Credit Card Skimming Scripts Utilizing WebRTC Discovered on Popular Shopping Sites](#item-tech-news-3) ⭐️ 7.0/10
+
+**Technology Blog**
+1. [Sean Goedecke on Who Decides If Something Is Written by AI](#item-tech-blog-1) ⭐️ 4.0/10
 
 ---
 
 ## Technology News
 
 <a id="item-tech-news-1"></a>
-### [AMD-Specific Fork of llama.cpp Optimizes Local LLM Performance on Older Datacenter GPUs](https://devnull.land/amd-specific-llama-cpp) ⭐️ 7.0/10
+### [SemiAnalysis Details AWS Trainium3 Microarchitecture and Inference Performance](https://newsletter.semianalysis.com/p/trainium3-inferencex) ⭐️ 8.0/10
 
-An AMD-specific fork of llama.cpp has gained traction for optimizing large language model performance on older datacenter GPUs equipped with fast HBM2 memory. Community members report that these hardware-specific optimizations and ported kernels significantly improve throughput and token processing speeds on affordable high-VRAM hardware.
+SemiAnalysis published a technical deep-dive into the AWS Trainium3 microarchitecture, evaluating its custom design for machine learning workloads against traditional GPUs. According to the report, Trainium3 and Google TPUs are now live on the InferenceX platform, where Trainium3 matches or outperforms the Nvidia GB300 in total cost of ownership \(TCO\) per generated token. Microbenchmarks from UBenchX indicate that Trainium's Descriptor Generation Engines \(DGE\) allow it to achieve peak HBM bandwidth utilization at small message sizes.
 
-hackernews · julianlam · Nov 26, 17:11 · [Discussion](https://news.ycombinator.com/item?id=50657265)
+rss · Semianalysis · Nov 27, 15:54
 
-**「Background」** The original llama.cpp project serves as a general-purpose framework for running large language models locally across various hardware backends. Users have increasingly sought custom forks to extract better performance from legacy datacenter hardware featuring high memory bandwidth.
+**「Background」** Traditional Nvidia GPUs evolved from graphics processors, adding AI-specific hardware layers incrementally across generations, such as Tensor Cores in Volta, TMA in Hopper, and Tensor Memory in Blackwell. In contrast, AWS built the Trainium microarchitecture ground-up specifically for machine learning workloads with tiles as a first-class primitive.
 
-**「Community Discussion」** Community members discussed utilizing circa 2018 gfx906 datacenter series cards to achieve high VRAM bandwidth at a lower cost, sharing personal forks and performance benchmarks. Contributors like fiddlerwoaroof noted that aggressively optimizing AMD code and porting Nvidia kernels to ROCm doubled or tripled Qwen3.8 performance on an MI100.
-
-**Tags**: `#llama.cpp`, `#AMD GPU`, `#Large Language Models`, `#Hardware Optimization`
+**Tags**: `#AWS Trainium`, `#Hardware Architecture`, `#Machine Learning`, `#Semiconductors`
 
 ---
 
 <a id="item-tech-news-2"></a>
-### [Google Restricts Third-Party AI Agents on Workspace MCP Servers](https://techstackups.com/articles/google-workspace-ai-agents-mcp/) ⭐️ 7.0/10
+### [Convex Skill Transmits App Ideas to Remote Server Without Explicit Notice](https://github.com/convex/convex-backend-skill/issues/64) ⭐️ 7.0/10
 
-Google has restricted third-party AI agents from performing write operations, such as sending emails, through its Model Context Protocol \(MCP\) servers for Google Workspace. This limitation affects developers and users attempting to build or run external agents with Google Workspace integrations. The restrictions highlight ongoing platform boundaries surrounding AI agent capabilities.
+An open GitHub issue revealed that a Convex development skill transmits user app ideas to a remote server without explicit user notification. Convex CEO Jamie responded in the discussion to clarify that the prompt upload powers the Convex quickstart feature, serving as a successor to the shut-down Convex Chef project to bootstrap applications.
 
-hackernews · ritzaco · Nov 26, 09:44 · [Discussion](https://news.ycombinator.com/item?id=50653477)
+hackernews · MickyTheMouse · Nov 27, 18:02 · [Discussion](https://news.ycombinator.com/item?id=50669765)
 
-**「Background」** Model Context Protocol \(MCP\) servers provide a standardized way for AI models to connect with data sources and tools. Google's recent approach involves integrating its Workspace environment with MCP servers while placing functional limits on third-party actions.
+**「Background」** Convex is a platform for building and hosting software that stores user data and code and provides an AI gateway for development and in-app features. The company previously developed an end-to-end vibe-coding product called Convex Chef, which has since been shut down.
 
-**「Community Discussion」** Commenters debated whether the write restrictions stem from genuine safety concerns regarding human confirmation or commercial strategies to protect native Gemini integrations. Several participants noted that MCP already supports elicitation primitives for user confirmation, while others predicted users might resort to browser automation instead.
+**「Community Discussion」** Commenters debated the privacy implications of development tools transmitting user prompts, with Convex CEO Jamie explaining that the data collection is intended to power application bootstrapping quickstart features. Other community members suggested that self-hosted, open-weight models represent a preferable long-term approach.
 
-**Tags**: `#artificial intelligence`, `#ai agents`, `#google workspace`, `#mcp`
+**Tags**: `#developer tools`, `#software privacy`, `#artificial intelligence`, `#open source`
 
 ---
 
 <a id="item-tech-news-3"></a>
-### [sqlite3\_rsync: Database Remote-Copy Tool For SQLite](https://simonwillison.net/2026/Nov/26/sqlite3-rsync/) ⭐️ 7.0/10
+### [Credit Card Skimming Scripts Utilizing WebRTC Discovered on Popular Shopping Sites](https://www.infohawk.com/news/2026-11-27-black-friday-webrtc-skimmer) ⭐️ 7.0/10
 
-The sqlite3\_rsync utility enables users to take snapshot copies of SQLite databases over an SSH connection without requiring enough local disk space for a full duplicate. It also supports synchronizing existing database copies by transmitting only differing pages using cryptographic hashes. The tool was initially introduced as experimental in SQLite version 3.47.0 in October 2024 and enhanced in version 3.50.0 in May 2025.
+Security researchers identified credit card skimming scripts utilizing WebRTC on prominent shopping sites during Black Friday to bypass traditional monitoring. The technique specifically targets mobile devices to remain undetected. The discovery highlights vulnerabilities in how third-party scripts execute on e-commerce platforms.
 
-rss · Simon Willison · Nov 26, 06:08
+hackernews · scanr · Nov 27, 15:40 · [Discussion](https://news.ycombinator.com/item?id=50668145)
 
-**「Background」** Traditional methods for capturing a SQLite database snapshot, such as the backup API or the VACUUM INTO command, require sufficient free disk space to store a complete local duplicate copy of the database.
+**「Background」** Credit card skimming scripts are unauthorized pieces of code injected into e-commerce websites to capture payment details entered by shoppers at checkout. Security monitoring tools traditionally focus on standard HTTP requests and network traffic to detect such data exfiltration.
 
-**「Impact」** Developers and administrators operating on constrained server instances with less than half of their disk space free can now back up and synchronize SQLite databases remotely without running out of local disk space.
+**「Community Discussion」** Community members debated whether WebRTC provides unique capabilities for this attack, with some arguing that standard HTTP requests or cross-domain form submissions could achieve the same exfiltration if Content Security Policies are misconfigured, noting that WebRTC is primarily used here simply because it is less frequently monitored.
 
-**Tags**: `#SQLite`, `#Database Backup`, `#Data Management`
+**Tags**: `#cybersecurity`, `#web security`, `#webrtc`, `#threat intelligence`
 
 ---
 
-<a id="item-tech-news-4"></a>
-### [SemiAnalysis Evaluates Recent Frontier AI Models Using GDPx Benchmark](https://newsletter.semianalysis.com/p/evaluating-recent-model-releases) ⭐️ 7.0/10
+## Technology Blog
 
-SemiAnalysis evaluated recent frontier AI model releases using its GDPx benchmark, which launched on November 1st with 206 tasks across 11 high-impact economic domains. The benchmark was designed to avoid saturation by featuring high difficulty, with the highest-scoring release-day model, Opus 5.5, achieving a score of just 12%. The evaluations follow a wave of new model releases from Anthropic, OpenAI, Google, Alibaba, and Moonshot.
+<a id="item-tech-blog-1"></a>
+### [Sean Goedecke on Who Decides If Something Is Written by AI](https://seangoedecke.com/who-gets-to-decide-if-something-is-written-by-ai/) ⭐️ 4.0/10
 
-rss · Semianalysis · Nov 26, 00:05
+rss · Sean Goedecke · Nov 27, 00:00
 
-**「Background」** GDPx was created to measure frontier AI intelligence specifically within high-impact economic domains like chip design, cybersecurity, biology, finance, legal, quant trading, recursive self-improvement, hardware design, materials science, alignment, and software engineering. It intentionally excludes broader economic taxonomies used by benchmarks like GDPVal or Agent's Last Exam because AI impact is not evenly distributed across the economy.
+**「Background」** Public disputes surrounding AI-generated writing frequently center on the reliability and use of automated detection tools like Pangram. The intense resistance these tools face reveals a deeper conflict over institutional power and a widespread distrust of the tech sector.
 
-**「Impact」** The benchmark provides significant headroom for distinguishing future model capabilities, bypassing the saturation issues seen in older evaluation suites such as Terminal Bench 4.0. However, SemiAnalysis notes that certain models experience suppressed overall scores due to safety classifiers in domains like cybersecurity, biology, and alignment.
+**「Solution」** Sean Goedecke argues that anti-AI critics oppose detection tooling primarily because it shifts social power and gatekeeping authority into the hands of the tech sector, reinforcing a broader disillusionment with tool-driven, legible processes over human-centered ones. Critics fear that relying on software arbiters extends the tech industry's influence over public discourse, literary prizes, and education. However, the author contends that the alternative—relying on community self-policing—is deeply flawed because individuals who do not frequently use AI are unreliable judges, often failing to recognize subtle AI tells or misidentifying polite human writing as machine-generated. Because ordinary investigations and human oversight cannot reliably catch skilled AI writing, the author asserts that maintaining boundaries in human art and culture requires utilizing the most powerful detection tools available, advocating for government-built or open-source platforms if commercial trust is lacking.
 
-**Tags**: `#artificial intelligence`, `#benchmarking`, `#frontier models`, `#economic impact`
+**「Takeaway」** Resistance to AI detection tools is rooted in a struggle over institutional power rather than technical flaws, yet rejecting these tools in favor of community self-policing inevitably invites more AI-generated content into human spaces.
+
+**Tags**: `#AI detection`, `#cultural impact`, `#software governance`
 
 ---
 
